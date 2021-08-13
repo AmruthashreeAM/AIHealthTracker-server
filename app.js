@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var tempRouter = require('./routes/temparature');
 var userRouter = require('./routes/user');
 var cors = require('cors');
-
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -43,5 +43,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
 module.exports = app;
