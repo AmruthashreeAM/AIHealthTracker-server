@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var tempRouter = require('./routes/temparature');
 var userRouter = require('./routes/user');
+var pillRouter = require('./routes/pill');
 var cors = require('cors');
 const port = process.env.PORT || 3000;
 
@@ -27,6 +28,7 @@ app.use('/', indexRouter);
 app.use('/temperature', tempRouter);
 app.use('/users',userRouter);
 app.use('/authenticate',userRouter);
+app.use('/pill',pillRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
