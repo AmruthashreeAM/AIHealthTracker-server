@@ -7,7 +7,7 @@ mongodb.MongoClient.connect('mongodb+srv://sxm4311:soumya123@cluster0.s89sh.mong
     connected = true;
     //db = connection.db('UserData');
     db = connection.db('AIHealthCareDataBase');
-    console.log("DB Conection successful AIHealthCareDataBase");
+    console.log("DB Conection successful AIHealthCareDataBase-TemperatureData");
 }).catch(error => {
     console.log("Error in connecting to DB");
 });
